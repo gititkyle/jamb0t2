@@ -1,0 +1,13 @@
+{
+    "name": "jamb0t2",
+    "version": "1.0.0",
+    "description": "the jambot bot",
+    "scripts": {
+        "start": "tsc && node dist/app.js"
+    },
+    "author": "chooons",
+    "devDependencies": {
+        "tslint": "6.1.2",
+        "typescript": "3.8.3"
+    }
+}
