@@ -1,0 +1,33 @@
+{
+    "replaceConsole": true,
+    "appenders": {
+        "console": {
+            "type": "console",
+            "layout": {
+                "type": "pattern",
+                "pattern": "%[%d %h jambot2 [%p] %c %z -%] %m"
+            }
+        },
+        "file": {
+            "type": "file",
+            "absolute": true,
+            "filename": "/jambot2/var/log/jambot2/jambot2.log",
+            "layout": {
+                "type": "pattern",
+                "pattern": "%[%d %h jambot2 [%p] %c %z -%] %m"
+            },
+            "maxLogSize": 20000000,
+            "backups": 10,
+            "alwaysIncludePattern": false
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": [
+                "console",
+                "file"
+            ],
+            "level": "debug"
+        }
+    }
+}
