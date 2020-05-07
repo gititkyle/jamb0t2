@@ -1,19 +1,18 @@
-const getHelp = async (data: any) => {
+async function getHelp (data: any): Promise<string[]> {
     return [
         'Help is on the way! :ambulance:'
     ];
-};
+}
 
-/** 
+/**
  * API
  */
-export default {
+const api = {
     moduleId: 'help',
     command: '!help',
     message: 'Failed to get help!',
     active: true,
-    handler: getHelp,
-    auth: {
-        roles: [] // TODO
-    }
-}
+    handler: getHelp
+};
+
+export default api;

@@ -1,4 +1,4 @@
-process.env['NODE_PATH'] = './:./src';
+process.env['NODE_PATH'] = '.:./:./src';
 
 import _                from 'lodash';
 import PlugApi          from 'plugapi';

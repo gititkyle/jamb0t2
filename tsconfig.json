@@ -6,10 +6,10 @@
         "esModuleInterop": true,
         "resolveJsonModule": true,
         "outDir": "dist",
-        "rootDir": "."
+        "rootDir": ".",
+        "baseUrl": "."
     },
     "exclude": [
         "**/*.spec.ts"
     ]
-  }
-  
+}
