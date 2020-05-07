@@ -10,5 +10,9 @@
         "baseUrl": ".",
         "rootDir": "."
     },
+    "exclude": [
+        "**/*.spec.ts"
+    ],
     "lib": ["es2015"]
   }
+  
