@@ -12,7 +12,7 @@ describe('auth', () => {
 
     describe('on import', () => {
         it('should expose api', () => {
-            expect(auth.isAuthorized).to.not.be.undefined;
+            expect(auth.isAuthorized).to.be.a('function');
         });
     });
 
