@@ -1,6 +1,6 @@
-import * as log4jambot2 from 'app/src/common/util/logger';
-import * as auth        from 'app/src/common/auth/auth';
-import * as modules     from 'app/src/common/modules/modules';
+import * as log4jambot2 from './../../common/util/logger';
+import * as auth        from './../../common/auth/auth';
+import * as modules     from './../../common/modules/modules';
 
 const logger = log4jambot2.logger('router');
 

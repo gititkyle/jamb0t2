@@ -1,18 +1,15 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "esModuleInterop": true,
         "target": "es6",
+        "module": "commonjs",
         "moduleResolution": "node",
-        "sourceMap": true,
-        "outDir": "dist",
+        "esModuleInterop": true,
         "resolveJsonModule": true,
-        "baseUrl": ".",
+        "outDir": "dist",
         "rootDir": "."
     },
     "exclude": [
         "**/*.spec.ts"
-    ],
-    "lib": ["es2015"]
+    ]
   }
   

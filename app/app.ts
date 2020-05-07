@@ -1,8 +1,10 @@
+process.env['NODE_PATH'] = './:./src';
+
 import _                from 'lodash';
 import PlugApi          from 'plugapi';
-import * as impl        from 'app/src/common/util/impl';
-import * as log4jambot2 from 'app/src/common/util/logger';
-import * as router      from 'app/src/common/util/router';
+import * as impl        from './src/common/util/impl';
+import * as log4jambot2 from './src/common/util/logger';
+import * as router      from './src/common/util/router';
 
 /** Configure logging */
 log4jambot2.configure('log4js.json');

@@ -1,5 +1,5 @@
 /** import modules */
-import help from 'app/src/help/help';
+import help from './../../help/help';
 
 const modules = {
     [help.moduleId]: help

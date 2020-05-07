@@ -1,4 +1,4 @@
-import * as modules from 'app/src/common/modules/modules';
+import * as modules from './../modules/modules';
 
 export function isAuthorized (moduleId: string='') {
     const module = modules.getModule(moduleId);
