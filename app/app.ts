@@ -2,6 +2,7 @@ process.env['NODE_PATH'] = '.:./:./src';
 
 import _                from 'lodash';
 import PlugApi          from 'plugapi';
+import * as config      from './../config/conf.json';
 import * as impl        from './src/common/util/impl';
 import * as log4jambot2 from './src/common/util/logger';
 import * as router      from './src/common/util/router';
@@ -16,7 +17,7 @@ const jambot2 = new PlugApi({
 });
 
 const logger  = log4jambot2.logger('app');
-const connect = (room: string=process.env.JAMBOT2_ROOM) => jambot2.connect(room);
+const connect = (room: string=config.plug.room) => jambot2.connect(room);
 
 jambot2.on(PlugApi.events.CHAT, async data => {
     logger.debug(`Message received from:@${data.from} ${data.message}`);

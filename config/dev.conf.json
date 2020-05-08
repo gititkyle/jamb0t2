@@ -1,5 +1,12 @@
 {
     "server": {
         "env": "dev"
+    },
+    "plug": {
+        "room": "qa-justjambands"
+    },
+    "giphy": {
+        "search": "https://api.giphy.com/v1/gifs/search",
+        "media": "https://media.giphy.com/media/{mediaId}/giphy.gif"
     }
 }

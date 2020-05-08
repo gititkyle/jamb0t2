@@ -1,22 +1,26 @@
-/** import modules */
+import * as convert from './../util/convert';
+
+/** import features */
+import gif  from './../../gif/gif';
 import help from './../../help/help';
 
 const modules = {
-    [help.moduleId]: help
+    [help.moduleId]: help,
+    [gif.moduleId]: gif
 };
 
-export function getModuleId (message: string=''): string {
-    const moduleId = message.match(/(?<=!)[\w]*/)[0];
+export function getModuleId (message: string): string {
+    const moduleId = convert.toModuleId(message);
 
     if(modules[moduleId]) {
         return moduleId;
     }
 }
 
-export function getModule (moduleId: string=''): any {
+export function getModule (moduleId: string): any {
     return modules[moduleId];
 }
 
-export function isActive (moduleId: string=''): boolean {
+export function isActive (moduleId: string): boolean {
     return modules[moduleId]?.active;
 }
