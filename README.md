@@ -8,7 +8,11 @@
 1. TypeScript 3.8.3
 
 ## Getting started
-1. Create a [plug.dj](https://plug.dj) account for your bot
+1. Make sure you have `node` installed or start [here](https://nodejs.org/en/download/)
+1. Verify `node` and `npm` versions
+    + `node -v` (should ouput `v12.16.0` or similar)
+    + `npm -v` (should output `6.13.4` or similar)
+1. Create a [plug.dj](https://plug.dj) account for your test bot
 1. Generate api keys (required for certain features)
     + [giphy](https://developers.giphy.com/docs/sdk/)
 1. Clone this repo
@@ -32,9 +36,9 @@
     + `ln -s dev.conf.json conf.json`
     + edit `conf.json` to use your room if you aren't using `qa-justjambands` to test
         ```
-            "plug": {
-                "room": "<your room>"
-            }
+        "plug": {
+            "room": "<your room>"
+        }
 1. Run
     + `cd ..` back to the root directory
     + `npm run start`
