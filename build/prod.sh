@@ -17,6 +17,9 @@ echo "*** Installing npm dependencies ***"
 rm -rf node_modules
 npm install --no-audit
 
+echo "*** Running tests ***"
+npm test
+
 echo "*** Generating app dist ***"
 npm run clean:dist
 npm run build:dist
