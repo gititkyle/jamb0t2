@@ -58,6 +58,7 @@
 
 ## Structure
 **/app** - app<br/>
+**/app/rsrc** - resources <br />
 **/app/src** - source<br/>
 **/build** - build scripts<br/>
 **/config** - configuration<br/>
