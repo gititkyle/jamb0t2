@@ -7,6 +7,9 @@
     },
     "giphy": {
         "search": "https://api.giphy.com/v1/gifs/search",
-        "media": "https://media.giphy.com/media/{mediaId}/giphy.gif"
+        "media":  "https://media.giphy.com/media/{mediaId}/giphy.gif"
+    },
+    "twitter": {
+        "tweet": "https://api.twitter.com/1.1/statuses/update.json"
     }
 }
