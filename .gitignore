@@ -3,3 +3,4 @@
 **/.nyc_output
 **/config/conf.json
 **/coverage
+**/.DS_Store
