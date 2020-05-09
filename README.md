@@ -15,16 +15,22 @@
 1. Create a [plug.dj](https://plug.dj) account for your test bot
 1. Generate api keys (required for certain features)
     + [giphy](https://developers.giphy.com/docs/sdk/)
+    + [twitter](https://developer.twitter.com)
 1. Clone this repo
     + `git clone git@github.com:chooooons/jamb0t2.git`
     + `cd jamb0t2`
 1. Set environment variables
     + `vim ~/.bash_profile`
-    + add `export NODE_PATH=$NODE_PATH:./:./app`
-    + add `export JAMBOT2_EMAIL=<email>`
-    + add `export JAMBOT2_PASSWORD=<password>`
-    + add `export GIPHY_KEY=<giphy key>`
-    + save and close
+    + Add the following lines
+        + `export NODE_PATH=$NODE_PATH:./:./app`
+        + `export JAMBOT2_EMAIL=<email>`
+        + `export JAMBOT2_PASSWORD=<password>`
+        + `export GIPHY_KEY=<giphy key>`
+        + `export TWITTER_CONSUMER_KEY=<key>`
+        + `export TWITTER_CONSUMER_SECRET=<secret>`
+        + `export TWITTER_ACCESS_KEY=<key>`
+        + `export TWITTER_ACCESS_SECRET=<secret>`
+    + save and close editor
     + `source ~/.bash_profile`
 1. Install npm dependencies
     + `npm install`
@@ -68,3 +74,5 @@
         + `"typescript": "3.8.3"` not `"typescript": "^3.8.3"`
 1. Style
     + Indentation of 4 spaces
+
+[<img width="50" alt="@jamb0t2" src="app/rsrc/images/Twitter_Logo_Blue.png">](https://twitter.com/jamb0t2)
