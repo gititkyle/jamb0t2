@@ -6,6 +6,8 @@ import * as config      from './../config/conf.json';
 import * as impl        from './src/common/util/impl';
 import * as log4jambot2 from './src/common/util/logger';
 import * as router      from './src/common/util/router';
+import * as roles       from './src/common/roles/roles';
+import twitter          from './src/twitter/twitter';
 
 /** Configure logging */
 log4jambot2.configure('log4js.json');
@@ -20,7 +22,7 @@ const logger  = log4jambot2.logger('app');
 const connect = (room: string=config.plug.room) => jambot2.connect(room);
 
 jambot2.on(PlugApi.events.CHAT, async data => {
-    logger.debug(`Message received from:@${data.from} ${data.message}`);
+    logger.debug(`Message received: @${data.from} ${data.message}`);
 
     if(/^!\w+/.test(data.message)) {
         const start = Date.now();
@@ -42,8 +44,22 @@ jambot2.on(PlugApi.events.CHAT, async data => {
     }
 });
 
-// @ts-ignore
-jambot2.on(PlugApi.events.ADVANCE, jambot2.woot);
+jambot2.on(PlugApi.events.ADVANCE, async data => {
+    logger.debug(`Now playing: @${data.currentDJ?.username} is spinning ${data.media?.author} - ${data.media?.title}`);
+
+    setTimeout(() => {
+        // @ts-ignore
+        jambot2.woot();
+    }, 2000);
+
+    /**
+     * Invoke twitter handler for bouncers and above only
+     */
+    if(data.currentDJ?.role >= roles.ROLE_IDS.Bouncer) {
+        twitter.tweet(data);
+    }
+});
+
 jambot2.on('error', connect);
 jambot2.on('close', connect);
 // @ts-ignore

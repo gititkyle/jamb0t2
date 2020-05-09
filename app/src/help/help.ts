@@ -1,4 +1,4 @@
-async function getHelp (data: any): Promise<string[]> {
+async function get (data: any): Promise<string[]> {
     return [
         'Help is on the way! :ambulance:'
     ];
@@ -12,7 +12,7 @@ const api = {
     command: '!help',
     message: 'Failed to get help!',
     active: true,
-    handler: getHelp
+    handler: get
 };
 
 export default api;
