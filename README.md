@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="app/rsrc/images/avatar.gif">
+    <img width="115" src="app/rsrc/images/avatar.gif">
 </div>
 
 # `jamb0t2`: the bot who jams [plug.dj/justjambands](https://plug.dj/justjambands)
@@ -36,7 +36,7 @@
         + `export TWITTER_CONSUMER_SECRET=<secret>`
         + `export TWITTER_ACCESS_KEY=<key>`
         + `export TWITTER_ACCESS_SECRET=<secret>`
-    + save and close editor
+    + `:wq` save and [close](https://img.devrant.com/devrant/rant/r_807739_n54aC.jpg)
     + `source ~/.bash_profile`
 1. Install npm dependencies
     + `npm install`
