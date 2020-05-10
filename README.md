@@ -1,3 +1,7 @@
+<div align="center">
+    <img src="app/rsrc/images/avatar.gif">
+</div>
+
 # `jamb0t2`: the bot who jams [plug.dj/justjambands](https://plug.dj/justjambands)
 
 [![Build Status](https://travis-ci.org/chooooons/jamb0t2.svg?branch=master)](https://travis-ci.org/chooooons/jamb0t2)
