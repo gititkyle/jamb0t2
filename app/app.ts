@@ -45,7 +45,11 @@ jambot2.on(PlugApi.events.CHAT, async data => {
 });
 
 jambot2.on(PlugApi.events.ADVANCE, async data => {
-    logger.debug(`Now playing: @${data.currentDJ?.username} is spinning ${data.media?.author} - ${data.media?.title}`);
+    if(!data.currentDJ) {
+        return;
+    }
+
+    logger.debug(`Now playing: @${data.currentDJ.username} is spinning ${data.media.author} - ${data.media.title}`);
 
     setTimeout(() => {
         // @ts-ignore
@@ -55,7 +59,7 @@ jambot2.on(PlugApi.events.ADVANCE, async data => {
     /**
      * Invoke twitter handler for bouncers and above only
      */
-    if(data.currentDJ?.role >= roles.ROLE_IDS.Bouncer) {
+    if(data.currentDJ.role >= roles.ROLE_IDS.Bouncer) {
         twitter.tweet(data);
     }
 });
