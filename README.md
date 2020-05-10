@@ -19,6 +19,8 @@
 1. Clone this repo
     + `git clone git@github.com:chooooons/jamb0t2.git`
     + `cd jamb0t2`
+1. Work off develop branch
+    + `git checkout -b <your-branch-name>`
 1. Set environment variables
     + `vim ~/.bash_profile`
     + Add the following lines
@@ -53,17 +55,17 @@
 1. Specs live in the same directory as the feature it tests
     + `score.ts`
     + `score.spec.ts`
-1. Use `npm test` to run all tests
-1. Use `npm test:coverage` to generate coverage report
+1. Run `npm test` to run all tests
+1. Run `npm test:coverage` to generate coverage report
 
 ## Structure
-**/app** - app<br/>
+**/app** - app entry<br/>
 **/app/rsrc** - resources <br />
 **/app/src** - source<br/>
 **/build** - build scripts<br/>
 **/config** - configuration<br/>
-**/coverage** - coverage (emitted by `nyc`)<br/>
-**/dist** - distribution app (emitted by `tsc`)<br/>
+**/coverage** - coverage (emitted by `nyc` and ignored by git)<br/>
+**/dist** - distribution app (emitted by `tsc` and ignored by git)<br/>
 
  ## Logs
 + console
@@ -76,4 +78,7 @@
 1. Style
     + Indentation of 4 spaces
 
-[<img width="50" alt="@jamb0t2" src="app/rsrc/images/Twitter_Logo_Blue.png">](https://twitter.com/jamb0t2)
+## Tasks
+All tasks are defined in `package.json`. This is subject to change as this project grows.
+
+[<img width="50" alt="@jamb0t2" src="app/rsrc/images/twitter-logo.png">](https://twitter.com/jamb0t2)
