@@ -7,9 +7,9 @@
 [![Build Status](https://travis-ci.org/chooooons/jamb0t2.svg?branch=master)](https://travis-ci.org/chooooons/jamb0t2)
 
 ## Tools
-1. node 12.16.0
-1. npm 6.13.4
-1. TypeScript 3.8.3
++ node 12.16.0
++ npm 6.13.4
++ TypeScript 3.8.3
 
 ## Getting started
 1. Make sure you have `node` installed or start [here](https://nodejs.org/en/download/)
@@ -24,7 +24,7 @@
     + `git clone git@github.com:chooooons/jamb0t2.git`
     + `cd jamb0t2`
 1. Work off develop branch
-    + `git checkout -b <your-branch-name>`
+    + `git checkout -b <your-branch-name> develop`
 1. Set environment variables
     + `vim ~/.bash_profile`
     + Add the following lines
@@ -64,12 +64,12 @@
 
 ## Structure
 **/app** - app entry<br/>
-**/app/rsrc** - resources <br />
+**/app/rsrc** - resources <br/>
 **/app/src** - source<br/>
 **/build** - build scripts<br/>
 **/config** - configuration<br/>
-**/coverage** - coverage (emitted by `nyc` and ignored by git)<br/>
-**/dist** - distribution app (emitted by `tsc` and ignored by git)<br/>
+**/coverage** - coverage (emitted by `nyc`)<br/>
+**/dist** - distribution app (emitted by `tsc`)<br/>
 
  ## Logs
 + console
@@ -83,6 +83,6 @@
     + Indentation of 4 spaces
 
 ## Tasks
-All tasks are defined in `package.json`. This is subject to change as this project grows.
+All tasks are defined in `package.json` and run with `npm run <task>`. This is subject to change as this project grows.
 
 [<img width="50" alt="@jamb0t2" src="app/rsrc/images/twitter-logo.png">](https://twitter.com/jamb0t2)

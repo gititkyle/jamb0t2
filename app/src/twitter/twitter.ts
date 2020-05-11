@@ -13,7 +13,7 @@ const client = new Twitter({
 });
 
 async function tweet (data: any) {
-    const status = `${data.currentDJ.username} is spinning ${data.media?.author} - ${data.media?.title}. Join us @ https://plug.dj/justjambands!`;
+    const status = `Now playing: ${data.media?.author} - ${data.media?.title}. Join us @ https://plug.dj/justjambands!`;
 
     try {
         await client.post(config.twitter.tweet, {status});
