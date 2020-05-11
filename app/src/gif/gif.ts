@@ -1,6 +1,6 @@
 import _            from 'lodash';
 import fetch        from 'node-fetch';
-import * as config  from 'config/conf.json';
+import * as config  from './../../../config/conf.json';
 import * as convert from './../common/util/convert';
 
 const search = config.giphy.search;

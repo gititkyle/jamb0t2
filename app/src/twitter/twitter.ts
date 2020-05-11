@@ -1,6 +1,6 @@
 import util             from 'util';
 import Twitter          from 'twitter';
-import * as config      from 'config/conf.json';
+import * as config      from './../../../config/conf.json';
 import * as log4jambot2 from './../common/util/logger';
 
 const logger = log4jambot2.logger('twitter');
