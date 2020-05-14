@@ -13,6 +13,7 @@
         "test:coverage": "nyc --reporter=html mocha"
     },
     "author": "chooooons",
+    "license": "MIT",
     "devDependencies": {
         "@types/chai": "4.2.11",
         "@types/lodash": "4.14.150",
