@@ -46,14 +46,14 @@
 1. Link configuration
     + `cd config` from the root directory of this project
     + `ln -s dev.conf.json conf.json`
-    + edit `conf.json` to use your room if you aren't using `qa-justjambands` to test
+    + edit `conf.json` to use your room if you aren't using `dev-justjambands` to test
         ```
         "plug": {
             "room": "<your room>"
         }
 1. Run
     + `cd ..` back to the root directory
-    + `npm run start`
+    + `npm start`
 
 ## Specs
 1. Specs live in the same directory as the feature it tests
