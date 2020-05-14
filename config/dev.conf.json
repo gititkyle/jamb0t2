@@ -3,7 +3,7 @@
         "env": "dev"
     },
     "plug": {
-        "room": "qa-justjambands"
+        "room": "dev-justjambands"
     },
     "giphy": {
         "search": "https://api.giphy.com/v1/gifs/search",
