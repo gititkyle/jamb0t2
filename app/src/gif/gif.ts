@@ -12,13 +12,13 @@ async function get (data: any): Promise<string[]> {
     const query = args.join('+');
 
     try {
-        const result   = await fetch(`${search}?api_key=${key}&q=${query}`);
-        const json     = await result.json();
-        const mediaId  = _.sample(json?.data)?.id;
-        const mediaUrl = media.replace('{mediaId}', mediaId);
+        const result  = await fetch(`${search}?api_key=${key}&q=${query}`);
+        const json    = await result.json();
+        const mediaId = _.sample(json?.data)?.id;
+        const message = mediaId ? media.replace('{mediaId}', mediaId) : api.message;
 
         return [
-            mediaUrl
+            message
         ];
 
     } catch (e) {
