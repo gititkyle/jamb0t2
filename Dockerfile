@@ -1,8 +1,9 @@
 FROM node:12.16.0
 
-RUN mkdir -p /jamb0t2/node/app/node_modules && chown -R node:node /jamb0t2/node/app
+RUN mkdir -p /home/node/jamb0t2/node_modules && chown -R node:node /home/node/jamb0t2
+RUN mkdir -p /home/node/var/log && chown -R node:node /home/node/var/log
 
-WORKDIR /jamb0t2/node/app
+WORKDIR /home/node/jamb0t2/
 
 COPY package*.json ./
 
