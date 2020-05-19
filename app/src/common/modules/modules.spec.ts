@@ -8,7 +8,7 @@ describe('modules', () => {
     describe('on import', () => {
         it('should expose api', () => {
             expect(modules.getModuleId).to.be.a('function');
-            expect(modules.getModule).to.be.a('function');
+            expect(modules.getModuleById).to.be.a('function');
             expect(modules.isActive).to.be.a('function');
         });
     });
@@ -40,14 +40,14 @@ describe('modules', () => {
         });
     });
 
-    describe('on getModule()', () => {
+    describe('on getModuleById()', () => {
         let moduleId;
         let result;
 
         describe('with a valid moduleId passed', () => {
             beforeEach(() => {
                 moduleId = 'help';
-                result = modules.getModule(moduleId);
+                result = modules.getModuleById(moduleId);
             });
 
             it('should return the module', () => {
@@ -58,7 +58,7 @@ describe('modules', () => {
         describe('with an invalid moduleId passed', () => {
             beforeEach(() => {
                 moduleId = 'some-invalid-moduleId';
-                result = modules.getModule(moduleId);
+                result = modules.getModuleById(moduleId);
             });
 
             it('should return undefined', () => {
