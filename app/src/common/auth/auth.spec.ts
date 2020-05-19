@@ -32,8 +32,8 @@ describe('auth', () => {
                     id: 'some-id'
                 };
 
-                getModuleStub = sinon.stub(modules, 'getModule').returns(module);
-                result = auth.isAuthorized(module.id);
+                getModuleStub = sinon.stub(modules, 'getModuleById').returns(module);
+                result = auth.isAuthorized(module.id, 5000);
             });
 
             it('should return true', () => {
@@ -43,7 +43,7 @@ describe('auth', () => {
         });
 
         describe('with auth defined on the module', () => {
-            const roleId = 'some-id';
+            const roleId = 5000;
 
             beforeEach(() => {
                 module = {
@@ -53,7 +53,7 @@ describe('auth', () => {
                     }
                 };
 
-                getModuleStub = sinon.stub(modules, 'getModule').returns(module);
+                getModuleStub = sinon.stub(modules, 'getModuleById').returns(module);
             });
 
             describe('with a user authorized to use the module', () => {
@@ -68,7 +68,7 @@ describe('auth', () => {
             });
 
             describe('with a user not authorized to use the module', () => {
-                const otherRoleId = 'some-other-id';
+                const otherRoleId =  0;
 
                 beforeEach(() => {
                     result = auth.isAuthorized(module.id, otherRoleId);
