@@ -2,6 +2,7 @@ import util             from 'util';
 import Twitter          from 'twitter';
 import * as config      from './../../../config/conf.json';
 import * as log4jambot2 from './../common/util/logger';
+import * as roles       from './../common/roles/roles';
 
 const logger = log4jambot2.logger('twitter');
 
@@ -26,7 +27,17 @@ async function tweet (data: any) {
  * API
  */
 const api = {
-    tweet
+    moduleId: 'twitter',
+    active: true,
+    handler: tweet,
+    auth: {
+        roles: [
+            roles.ROLE_IDS.Host,
+            roles.ROLE_IDS.CoHost,
+            roles.ROLE_IDS.Manager,
+            roles.ROLE_IDS.Bouncer
+        ]
+    }
 };
 
 export default api;
