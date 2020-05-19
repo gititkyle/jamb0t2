@@ -2,9 +2,21 @@
     "name": "jamb0t2",
     "version": "1.0.0",
     "description": "the jambot bot",
+    "watch": {
+        "build:dev": {
+            "patterns": [
+                "app"
+            ],
+            "extensions": "ts",
+            "quiet": false
+        }
+    },
     "scripts": {
+        "watch:dev": "npm-watch build:dev",
+        "build:dev": "npm start",
         "prestart": "run-s clean:dist build:dist",
         "start": "node dist/app/app.js",
+        "start:dev": "npm run watch:dev",
         "build:dist": "tsc",
         "build:prod": "sh build/prod.sh",
         "clean:dist": "rm -rf dist",
@@ -18,6 +30,7 @@
         "@types/chai": "4.2.11",
         "@types/lodash": "4.14.150",
         "@types/mocha": "7.0.2",
+        "@types/mongoose": "^5.7.20",
         "@types/node": "13.13.5",
         "@types/node-fetch": "2.5.7",
         "@types/plugapi": "4.2.4",
@@ -27,6 +40,7 @@
         "chai": "4.2.0",
         "mocha": "7.1.2",
         "npm-run-all": "4.1.5",
+        "npm-watch": "0.6.0",
         "nyc": "15.0.1",
         "sinon": "9.0.2",
         "sinon-chai": "3.5.0",
@@ -37,6 +51,8 @@
     "dependencies": {
         "lodash": "4.17.15",
         "log4js": "6.2.1",
+        "moment": "2.25.3",
+        "mongoose": "5.9.14",
         "node-fetch": "2.6.0",
         "plugapi": "5.1.1",
         "twitter": "1.7.1"
