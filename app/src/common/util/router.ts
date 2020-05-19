@@ -1,21 +1,23 @@
+import { IRouteConfig } from './router-interface';
 import * as log4jambot2 from './../../common/util/logger';
 import * as auth        from './../../common/auth/auth';
 import * as modules     from './../../common/modules/modules';
 
 const logger = log4jambot2.logger('router');
 
-export async function route (config: any): Promise<string[]> {
-    const { data } = config;
-    const moduleId = modules.getModuleId(data.message);
-    const module   = modules.getModule(moduleId);
+export async function route (config: IRouteConfig): Promise<string[]> {
+    const { data, media } = config;
+    const roleId          = data.from.role;
+    const moduleId        = modules.getModuleId(data.message);
+    const module          = modules.getModuleById(moduleId);
 
     if (
         module &&
         modules.isActive(moduleId) &&
-        auth.isAuthorized(moduleId)
+        auth.isAuthorized(moduleId, roleId)
     ) {
         try {
-            return await module.handler(data);
+            return await module.handler({data, media});
         } catch (e) {
             return e;
         }
