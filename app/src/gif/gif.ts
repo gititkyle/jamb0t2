@@ -2,6 +2,7 @@ import _            from 'lodash';
 import fetch        from 'node-fetch';
 import * as config  from './../../../config/conf.json';
 import * as convert from './../common/util/convert';
+import * as roles   from './../common/roles/roles';
 
 const search = config.giphy.search;
 const media  = config.giphy.media;
@@ -31,7 +32,16 @@ const api = {
     command: '!gif',
     message: 'Failed to get gif!',
     active: true,
-    handler: get
+    handler: get,
+    auth: {
+        roles: [
+            roles.ROLE_IDS.Host,
+            roles.ROLE_IDS.CoHost,
+            roles.ROLE_IDS.Manager,
+            roles.ROLE_IDS.Bouncer,
+            roles.ROLE_IDS.ResidentDJ
+        ]
+    }
 };
 
 export default api;
