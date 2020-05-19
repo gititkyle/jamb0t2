@@ -1,8 +1,7 @@
-import _            from 'lodash';
 import * as modules from './../modules/modules';
 
-export function isAuthorized (moduleId: string, roleId?: string): boolean {
-    const module   = modules.getModule(moduleId);
+export function isAuthorized (moduleId: string, roleId: number): boolean {
+    const module   = modules.getModuleById(moduleId);
     let authorized = false;
 
     /**
