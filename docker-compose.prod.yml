@@ -1,0 +1,5 @@
+version: '3'
+
+services:
+    jamb0t2:
+        command: npm start

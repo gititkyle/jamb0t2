@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+    jamb0t2:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        restart: unless-stopped
+        volumes:
+            - .:/home/node/jamb0t2
+            - ./node_modules:/home/node/jamb0t2/node_modules
+        command: npm run start:dev
+    mongo:
+        ports:
+            - "27017:27107"
