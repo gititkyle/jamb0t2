@@ -12,6 +12,7 @@ before_script:
     - npm install --no-audit
 script:
     - npm test
+    - npm run prestart
     - docker build -t jamb0t2 .
 after_success:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
