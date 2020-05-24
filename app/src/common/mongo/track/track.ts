@@ -1,6 +1,6 @@
-import * as roles      from '../common/roles/roles';
-import * as log4jambot from '../common/util/logger';
-import Track           from '../common/mongo/track/track-model';
+import * as roles      from '../../roles/roles';
+import * as log4jambot from '../../util/logger';
+import Track           from './track-model';
 
 const logger = log4jambot.logger('tracks');
 
@@ -23,6 +23,9 @@ async function handler (data: any): Promise<void> {
     }
 }
 
+/**
+ * API
+ */
 const api = {
     moduleId: 'tracks',
     active: true,
