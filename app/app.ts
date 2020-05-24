@@ -8,7 +8,7 @@ import * as log4jambot2 from './src/common/util/logger';
 import * as router      from './src/common/util/router';
 import * as auth        from './src/common/auth/auth';
 import twitter          from './src/twitter/twitter';
-import tracks           from './src/tracks/tracks';
+import tracks           from './src/common/mongo/track/track';
 import mongo            from './src/common/mongo/connect';
 
 /** Configure logging */
