@@ -5,8 +5,8 @@ import * as modules     from './../../common/modules/modules';
 
 const logger = log4jambot2.logger('router');
 
-export async function route (config: IRouteConfig): Promise<string[]> {
-    const { data, media } = config;
+export async function route (routeConfig: IRouteConfig): Promise<string[]> {
+    const { data, media } = routeConfig;
     const roleId          = data.from.role;
     const moduleId        = modules.getModuleId(data.message);
     const module          = modules.getModuleById(moduleId);
