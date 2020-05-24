@@ -1,14 +1,20 @@
-import _            from 'lodash';
-import fetch        from 'node-fetch';
-import * as config  from './../../../config/conf.json';
-import * as convert from './../common/util/convert';
-import * as roles   from './../common/roles/roles';
+import _                from 'lodash';
+import fetch            from 'node-fetch';
+import * as config      from './../../../config/conf.json';
+import * as convert     from './../common/util/convert';
+import * as roles       from './../common/roles/roles';
+import * as log4jambot2 from './../common/util/logger';
+import { IRouteConfig } from './../common/util/router-interface';
 
 const search = config.giphy.search;
 const media  = config.giphy.media;
 const key    = process.env.GIPHY_KEY;
+const logger = log4jambot2.logger('gif');
 
-async function get (data: any): Promise<string[]> {
+async function get (routeConfig: IRouteConfig): Promise<string[]> {
+    logger.debug('BEGIN gif');
+
+    const { data } = routeConfig;
     const args  = convert.toArgs(data.message);
     const query = args.join('+');
 
@@ -23,6 +29,7 @@ async function get (data: any): Promise<string[]> {
         ];
 
     } catch (e) {
+        logger.debug(e);
         throw Error(api.message);
     }
 }
