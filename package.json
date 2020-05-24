@@ -18,7 +18,7 @@
         "start": "node dist/app/app.js",
         "start:dev": "npm run watch:dev",
         "build:dist": "tsc",
-        "build:prod": "sh build/prod.sh",
+        "build": "sh build/build.sh",
         "clean:dist": "rm -rf dist",
         "pretest": "NODE_PATH=./:./app",
         "test": "mocha",
