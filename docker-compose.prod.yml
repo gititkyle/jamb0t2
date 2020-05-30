@@ -1,5 +1,9 @@
-version: '3'
+version: '3.1'
 
 services:
     jamb0t2:
-        command: npm start
+        env_file: ~/.jamb0t2.prod
+        command: node dist/app/app.js
+    mongo:
+        env_file: ~/.jamb0t2.prod
+        restart: always
