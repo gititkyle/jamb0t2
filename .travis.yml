@@ -19,4 +19,4 @@ after_success:
     - docker tag jamb0t2 $DOCKER_USER/jamb0t2:$TRAVIS_BUILD_NUMBER
     - docker push $DOCKER_USER/jamb0t2:$TRAVIS_BUILD_NUMBER
     - docker tag jamb0t2 $DOCKER_USER/jamb0t2:latest
-    - docker push jamb0t2 $DOCKER_USER/jamb0t2:latest
+    - docker push $DOCKER_USER/jamb0t2:latest
